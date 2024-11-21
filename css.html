@@ -1,1 +1,1761 @@
 css.html
+//Concatenar nombre y apellido
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concatenar Nombre y Apellido</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        label { margin-right: 10px; }
+        button { margin-top: 10px; }
+        #resultado { margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre"><br><br>
+
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido"><br><br>
+
+    <button onclick="concatenar()">Concatenar</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function concatenar() {
+            const nombre = document.getElementById("nombre").value;
+            const apellido = document.getElementById("apellido").value;
+            document.getElementById("resultado").innerText = ${apellido} ${nombre};
+        }
+    </script>
+</body>
+</html>
+//Comparar frases
+HTML + CSS + JavaScript
+html
+Copiar código
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparar Frases</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        label { margin-right: 10px; }
+        button { margin-top: 10px; }
+        #resultado { margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <label for="frase1">Frase 1:</label>
+    <input type="text" id="frase1"><br><br>
+
+    <label for="frase2">Frase 2:</label>
+    <input type="text" id="frase2"><br><br>
+
+    <button onclick="comparar()">Comparar</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function comparar() {
+            const frase1 = document.getElementById("frase1").value;
+            const frase2 = document.getElementById("frase2").value;
+
+            let resultado;
+            if (frase1 === frase2) {
+                resultado = "Las frases son iguales.";
+            } else if (frase1 > frase2) {
+                resultado = "La primera frase es mayor.";
+            } else {
+                resultado = "La primera frase es menor.";
+            }
+            document.getElementById("resultado").innerText = resultado;
+        }
+    </script>
+</body>
+</html>
+//Crear palabra con espacios
+HTML + CSS + JavaScript
+html
+Copiar código
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Palabra con Espacios</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        label { margin-right: 10px; }
+        button { margin-top: 10px; }
+        #resultado { margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <label for="palabra">Ingresa una palabra:</label>
+    <input type="text" id="palabra"><br><br>
+
+    <button onclick="crearEspacios()">Crear con Espacios</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function crearEspacios() {
+            const palabra = document.getElementById("palabra").value;
+            let resultado = palabra.split('').join(' ');
+            document.getElementById("resultado").innerText = resultado;
+        }
+    </script>
+</body>
+</html>
+//Presentar cada carácter con su código ASCII
+HTML + CSS + JavaScript
+html
+Copiar código
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código ASCII de cada carácter</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        label { margin-right: 10px; }
+        button { margin-top: 10px; }
+        #resultado { margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <label for="frase">Ingresa una frase:</label>
+    <input type="text" id="frase"><br><br>
+
+    <button onclick="mostrarAscii()">Mostrar ASCII</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function mostrarAscii() {
+            const frase = document.getElementById("frase").value;
+            let resultado = '';
+            frase.split('').forEach(char => {
+                resultado += Carácter: ${char}, Código ASCII: ${char.charCodeAt(0)}<br>;
+            });
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+</body>
+</html>
+//Invertir una frase
+HTML + CSS + JavaScript
+html
+Copiar código
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invertir Frase</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        label { margin-right: 10px; }
+        button { margin-top: 10px; }
+        #resultado { margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <label for="frase">Ingresa una frase:</label>
+    <input type="text" id="frase"><br><br>
+
+    <button onclick="invertirFrase()">Invertir Frase</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function invertirFrase() {
+            const frase = document.getElementById("frase").value;
+            let invertida = frase.split('').reverse().join('');
+            document.getElementById("resultado").innerText = invertida;
+        }
+    </script>
+</body>
+</html>
+//Contar vocales en una palabra
+HTML + CSS + JavaScript
+html
+Copiar código
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contar Vocales</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        label { margin-right: 10px; }
+        button { margin-top: 10px; }
+        #resultado { margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <label for="palabra">Ingresa una palabra:</label>
+    <input type="text" id="palabra"><br><br>
+
+    <button onclick="contarVocales()">Contar Vocales</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function contarVocales() {
+            const palabra = document.getElementById("palabra").value;
+            let vocales = palabra.match(/[aeiouáéíóúü]/gi) || [];
+            document.getElementById("resultado").innerText = Número de vocales: ${vocales.length};
+        }
+    </script>
+</body>
+</html>
+//Contar letras del alfabeto en una palabra
+HTML + CSS + JavaScript
+html
+Copiar código
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contar Letras del Alfabeto</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        label { margin-right: 10px; }
+        button { margin-top: 10px; }
+        #resultado { margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <label for="palabra">Ingresa una palabra:</label>
+    <input type="text" id="palabra"><br><br>
+
+    <button onclick="contarLetras()">Contar Letras del Alfabeto</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function contarLetras() {
+            const palabra = document.getElementById("palabra").value;
+            let letras = palabra.match(/[a-zñáéíóúü]/gi) || [];
+            document.getElementById("resultado").innerText = Número de letras del alfabeto: ${letras.length};
+        }
+    </script>
+</body>
+</html>
+//Contar dígitos en una frase
+HTML + CSS + JavaScript
+html
+Copiar código
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contar Dígitos en una Frase</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        label { margin-right: 10px; }
+        button { margin-top: 10px; }
+        #resultado { margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <label for="frase">Ingresa una frase:</label>
+    <input type="text" id="frase"><br><br>
+
+    <button onclick="contarDigitos()">Contar Dígitos</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function contarDigitos() {
+            const frase = document.getElementById("frase").value;
+            let digitos = frase.match(/\d/g) || [];
+            document.getElementById("resultado").innerText = Número de dígitos: ${digitos.length};
+        }
+    </script>
+</body>
+</html>
+//Contar signos de puntuación en una palabra
+HTML + CSS + JavaScript
+html
+Copiar código
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contar Signos de Puntuación</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        label { margin-right: 10px; }
+        button { margin-top: 10px; }
+        #resultado { margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <label for="texto">Ingresa una palabra o frase:</label>
+    <input type="text" id="texto"><br><br>
+
+    <button onclick="contarSignos()">Contar Signos de Puntuación</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function contarSignos() {
+            const texto = document.getElementById("texto").value;
+            let signos = texto.match(/[.,;:!?¡¿'"-]/g) || [];
+            document.getElementById("resultado").innerText = Número de signos de puntuación: ${signos.length};
+        }
+    </script>
+</body>
+</html>
+//Contar palabras en una frase
+HTML + CSS + JavaScript
+html
+Copiar código
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contar Palabras</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        label { margin-right: 10px; }
+        button { margin-top: 10px; }
+        #resultado { margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <label for="frase">Ingresa una frase:</label>
+    <input type="text" id="frase"><br><br>
+
+    <button onclick="contarPalabras()">Contar Palabras</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function contarPalabras() {
+            const frase = document.getElementById("frase").value;
+            let palabras = frase.trim().split(/\s+/); // Separar por espacios
+            document.getElementById("resultado").innerText = Número de palabras: ${palabras.length};
+        }
+    </script>
+</body>
+</html>
+
+
+//Imprimir números impares: Imprimir todos los números impares entre 1 y 50.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Números Impares</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+
+    .impares {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .numero {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f39c12;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .numero:hover {
+      background-color: #e67e22;
+      transform: scale(1.1);
+      transition: 0.2s;
+    }
+  </style>
+</head>
+<body>
+  <h1>Números Impares (1 - 50)</h1>
+  <div class="impares" id="contenedorImpares">
+    <!-- Aquí se imprimirán los números impares -->
+  </div>
+
+  <script>
+    const contenedor = document.getElementById('contenedorImpares');
+
+    // Generar números impares y agregarlos al contenedor
+    for (let i = 1; i <= 50; i += 2) {
+      const numero = document.createElement('div');
+      numero.className = 'numero';
+      numero.textContent = i;
+      contenedor.appendChild(numero);
+    }
+  </script>
+</body>
+</html>
+
+//Calcular la suma de los primeros 100 números: Sumar todos los números del 1 al 100.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suma de los Primeros 100 Números</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+
+    .result {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #2ecc71;
+      color: white;
+      border-radius: 8px;
+      width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    button {
+      font-size: 18px;
+      padding: 10px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <h1>Calcular la Suma de los Primeros 100 Números</h1>
+  <button onclick="calcularSuma()">Calcular Suma</button>
+  
+  <div class="result" id="resultado">
+    <!-- Aquí se mostrará el resultado -->
+  </div>
+
+  <script>
+    function calcularSuma() {
+      let suma = 0;
+      for (let i = 1; i <= 100; i++) {
+        suma += i;
+      }
+      // Mostrar el resultado en el contenedor
+      document.getElementById('resultado').textContent = `La suma es: ${suma}`;
+    }
+  </script>
+</body>
+</html>
+
+//Suma de números pares: Sumar todos los números pares desde 1 hasta un número dado por el usuario.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suma de Números Pares</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #2ecc71;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #27ae60;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px;
+      background-color: #ecf0f1;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Suma de Números Pares</h2>
+    <p>Ingresa un número para calcular la suma de los números pares hasta ese número.</p>
+    <input type="number" id="numeroMaximo" placeholder="Ingresa un número">
+    <button onclick="sumarPares()">Calcular Suma de Pares</button>
+
+    <div class="result" id="resultado">
+      <!-- Aquí se mostrará el resultado -->
+    </div>
+  </div>
+
+  <script>
+    function sumarPares() {
+      const numeroMaximo = parseInt(document.getElementById('numeroMaximo').value) || 0;
+      let suma = 0;
+
+      // Sumar los números pares hasta el número dado
+      for (let i = 2; i <= numeroMaximo; i += 2) {
+        suma += i;
+      }
+
+      // Mostrar el resultado
+      document.getElementById('resultado').textContent = `La suma de los números pares hasta ${numeroMaximo} es: ${suma}`;
+    }
+  </script>
+</body>
+</html>
+
+//números divisibles por 3 y 5: Imprimir todos los números del 1 al 100 que sean divisibles por 3 y 5.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Números Divisibles por 3 y 5</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px;
+      background-color: #ecf0f1;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Números Divisibles por 3 y 5</h2>
+    <p>Haz clic en el botón para imprimir los números divisibles por 3 y 5 entre 1 y 100.</p>
+    <button onclick="divisiblesPor3y5()">Mostrar Números Divisibles por 3 y 5</button>
+
+    <div class="result" id="resultado">
+      <!-- Aquí se mostrará el resultado -->
+    </div>
+  </div>
+
+  <script>
+    function divisiblesPor3y5() {
+      const divisibles = [];
+
+      // Verificar números del 1 al 100
+      for (let i = 1; i <= 100; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+          divisibles.push(i);
+        }
+      }
+
+      // Mostrar los números divisibles por 3 y 5
+      document.getElementById('resultado').textContent = `Números divisibles por 3 y 5 entre 1 y 100: ${divisibles.join(', ')}`;
+    }
+  </script>
+</body>
+</html>
+
+//Generar la tabla de multiplicar: Generar la tabla de multiplicar de un número ingresado por el usuario.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generar Tabla de Multiplicar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px;
+      background-color: #ecf0f1;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .tabla {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px;
+      background-color: #ecf0f1;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .tabla div {
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Generar la Tabla de Multiplicar</h2>
+    <p>Ingresa un número para generar su tabla de multiplicar.</p>
+    <input type="number" id="numero" placeholder="Ingresa un número">
+    <button onclick="generarTabla()">Generar Tabla</button>
+
+    <div class="result" id="resultado">
+      <!-- Aquí se mostrará el mensaje o la tabla -->
+    </div>
+
+    <div class="tabla" id="tablaMultiplicar">
+      <!-- Aquí se mostrará la tabla de multiplicar -->
+    </div>
+  </div>
+
+  <script>
+    function generarTabla() {
+      const numero = parseInt(document.getElementById('numero').value) || 0;
+      const tablaDiv = document.getElementById('tablaMultiplicar');
+      const resultadoDiv = document.getElementById('resultado');
+
+      // Limpiar la tabla y el mensaje anterior
+      tablaDiv.innerHTML = '';
+      resultadoDiv.innerHTML = '';
+
+      // Si no se ingresa un número válido
+      if (numero === 0) {
+        resultadoDiv.textContent = 'Por favor ingresa un número válido.';
+        return;
+      }
+
+      // Generar la tabla de multiplicar
+      for (let i = 1; i <= 10; i++) {
+        const result = numero * i;
+        const line = document.createElement('div');
+        line.textContent = `${numero} x ${i} = ${result}`;
+        tablaDiv.appendChild(line);
+      }
+
+      resultadoDiv.textContent = `Tabla de multiplicar del ${numero}:`;
+    }
+  </script>
+</body>
+</html>
+
+//Números Fibonacci: Imprimir los primeros n números de la serie de Fibonacci.
+Ejemplo: Si n= 7 la serie es: 0 1 1 2 3 5 8 13
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serie Fibonacci</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px;
+      background-color: #ecf0f1;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .fibonacci {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px;
+      background-color: #ecf0f1;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .fibonacci div {
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Generar Serie de Fibonacci</h2>
+    <p>Ingresa el número de términos que deseas ver en la serie Fibonacci.</p>
+    <input type="number" id="numero" placeholder="Ingresa un número">
+    <button onclick="generarFibonacci()">Generar Fibonacci</button>
+
+    <div class="result" id="resultado">
+      <!-- Aquí se mostrará el mensaje o la serie -->
+    </div>
+
+    <div class="fibonacci" id="fibonacciSerie">
+      <!-- Aquí se mostrará la serie Fibonacci -->
+    </div>
+  </div>
+
+  <script>
+    function generarFibonacci() {
+      const n = parseInt(document.getElementById('numero').value) || 0;
+      const fibonacciDiv = document.getElementById('fibonacciSerie');
+      const resultadoDiv = document.getElementById('resultado');
+
+      // Limpiar la serie y el mensaje anterior
+      fibonacciDiv.innerHTML = '';
+      resultadoDiv.innerHTML = '';
+
+      // Si no se ingresa un número válido
+      if (n <= 0) {
+        resultadoDiv.textContent = 'Por favor ingresa un número mayor que 0.';
+        return;
+      }
+
+      // Inicializamos los dos primeros números de la secuencia Fibonacci
+      let a = 0, b = 1;
+      let fibonacciSerie = [a, b];
+
+      // Generar la serie de Fibonacci hasta el número n
+      for (let i = 2; i < n; i++) {
+        let siguiente = a + b;
+        fibonacciSerie.push(siguiente);
+        a = b;
+        b = siguiente;
+      }
+
+      // Mostrar el mensaje de la serie
+      resultadoDiv.textContent = `Serie Fibonacci de ${n} términos:`;
+
+      // Mostrar la serie de Fibonacci
+      fibonacciSerie.forEach(num => {
+        const line = document.createElement('div');
+        line.textContent = num;
+        fibonacciDiv.appendChild(line);
+      });
+    }
+  </script>
+</body>
+</html>
+
+//Calcular la multiplicación de n números: Multiplicar todos los números del 1 al 10
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiplicación de Números del 1 al 10</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px;
+      background-color: #ecf0f1;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Calcular la Multiplicación de Números del 1 al 10</h2>
+    <button onclick="calcularMultiplicacion()">Calcular Multiplicación</button>
+
+    <div class="result" id="resultado">
+      <!-- Aquí se mostrará el resultado -->
+    </div>
+  </div>
+
+  <script>
+    function calcularMultiplicacion() {
+      let resultado = 1;
+
+      // Multiplicar todos los números del 1 al 10
+      for (let i = 1; i <= 10; i++) {
+        resultado *= i;
+      }
+
+      // Mostrar el resultado
+      document.getElementById('resultado').textContent = `El resultado de la multiplicación de los números del 1 al 10 es: ${resultado}`;
+    }
+  </script>
+</body>
+</html>
+
+//Factorial de un número: Calcular el factorial de un número dado por el usuario.  Num=5 =  resp= 5*4*3*2*1 = 120
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calcular Factorial</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px;
+      background-color: #ecf0f1;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Calcular Factorial de un Número</h2>
+    <p>Ingresa un número para calcular su factorial.</p>
+    <input type="number" id="numero" placeholder="Ingresa un número">
+    <button onclick="calcularFactorial()">Calcular Factorial</button>
+
+    <div class="result" id="resultado">
+      <!-- Aquí se mostrará el resultado -->
+    </div>
+  </div>
+
+  <script>
+    function calcularFactorial() {
+      const numero = parseInt(document.getElementById('numero').value);
+      const resultadoDiv = document.getElementById('resultado');
+
+      // Limpiar el resultado anterior
+      resultadoDiv.innerHTML = '';
+
+      // Verificar si el número es válido y positivo
+      if (isNaN(numero) || numero <= 0) {
+        resultadoDiv.textContent = 'Por favor ingresa un número entero positivo.';
+        return;
+      }
+
+      // Calcular el factorial
+      let factorial = 1;
+      let detalles = `${numero}! = `;
+      
+      for (let i = 1; i <= numero; i++) {
+        factorial *= i;
+        detalles += i;
+        if (i < numero) {
+          detalles += ' * ';
+        }
+      }
+
+      // Mostrar el resultado
+      detalles += ` = ${factorial}`;
+      resultadoDiv.textContent = detalles;
+    }
+  </script>
+</body>
+</html>
+
+//Imprimir múltiplos de un número: Imprimir todos los divisores de un número dado entre 1 y 20.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imprimir Divisores de un Número</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px;
+      background-color: #ecf0f1;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Imprimir Divisores de un Número entre 1 y 20</h2>
+    <p>Ingresa un número para ver sus divisores entre 1 y 20.</p>
+    <input type="number" id="numero" placeholder="Ingresa un número">
+    <button onclick="imprimirDivisores()">Ver Divisores</button>
+
+    <div class="result" id="resultado">
+      <!-- Aquí se mostrarán los divisores -->
+    </div>
+  </div>
+
+  <script>
+    function imprimirDivisores() {
+      const numero = parseInt(document.getElementById('numero').value);
+      const resultadoDiv = document.getElementById('resultado');
+      
+      // Limpiar el resultado anterior
+      resultadoDiv.innerHTML = '';
+
+      // Verificar si el número es válido
+      if (isNaN(numero) || numero <= 0) {
+        resultadoDiv.textContent = 'Por favor ingresa un número mayor que 0.';
+        return;
+      }
+
+      // Encontrar y mostrar los divisores del número entre 1 y 20
+      let divisores = [];
+      for (let i = 1; i <= 20; i++) {
+        if (numero % i === 0) {
+          divisores.push(i);
+        }
+      }
+
+      // Mostrar los divisores
+      if (divisores.length > 0) {
+        resultadoDiv.textContent = `Los divisores de ${numero} entre 1 y 20 son: ${divisores.join(', ')}`;
+      } else {
+        resultadoDiv.textContent = `El número ${numero} no tiene divisores entre 1 y 20.`;
+      }
+    }
+  </script>
+</body>
+</html>
+
+//Presentar los divisores de un número: Mostrar los divisores de un número excluyendo el propio número.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mostrar Divisores Excluyendo el Número</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px;
+      background-color: #ecf0f1;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Mostrar Divisores de un Número Excluyendo el Propio Número</h2>
+    <p>Ingresa un número para ver sus divisores (excluyendo el propio número).</p>
+    <input type="number" id="numero" placeholder="Ingresa un número">
+    <button onclick="mostrarDivisores()">Ver Divisores</button>
+
+    <div class="result" id="resultado">
+      <!-- Aquí se mostrarán los divisores -->
+    </div>
+  </div>
+
+  <script>
+    function mostrarDivisores() {
+      const numero = parseInt(document.getElementById('numero').value);
+      const resultadoDiv = document.getElementById('resultado');
+      
+      // Limpiar el resultado anterior
+      resultadoDiv.innerHTML = '';
+
+      // Verificar si el número es válido
+      if (isNaN(numero) || numero <= 1) {
+        resultadoDiv.textContent = 'Por favor ingresa un número mayor que 1.';
+        return;
+      }
+
+      // Encontrar y mostrar los divisores del número, excluyendo el número
+      let divisores = [];
+      for (let i = 1; i < numero; i++) {
+        if (numero % i === 0) {
+          divisores.push(i);
+        }
+      }
+
+      // Mostrar los divisores
+      if (divisores.length > 0) {
+        resultadoDiv.textContent = `Los divisores de ${numero} (excluyendo el propio número) son: ${divisores.join(', ')}`;
+      } else {
+        resultadoDiv.textContent = `El número ${numero} no tiene divisores menores que él.`;
+      }
+    }
+  </script>
+</body>
+</html>
+
+//Número perfecto: Verificar si un número es perfecto (la suma de sus divisores excluyendo el número da como resultado el propio número).
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verificar Número Perfecto</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px;
+      background-color: #ecf0f1;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Verificar si un Número es Perfecto</h2>
+    <p>Ingresa un número para verificar si es perfecto.</p>
+    <input type="number" id="numero" placeholder="Ingresa un número">
+    <button onclick="verificarPerfecto()">Verificar Número Perfecto</button>
+
+    <div class="result" id="resultado">
+      <!-- Aquí se mostrará el resultado -->
+    </div>
+  </div>
+
+  <script>
+    function verificarPerfecto() {
+      const numero = parseInt(document.getElementById('numero').value);
+      const resultadoDiv = document.getElementById('resultado');
+      
+      // Limpiar el resultado anterior
+      resultadoDiv.innerHTML = '';
+
+      // Verificar si el número es válido
+      if (isNaN(numero) || numero <= 1) {
+        resultadoDiv.textContent = 'Por favor ingresa un número mayor que 1.';
+        return;
+      }
+
+      // Calcular la suma de los divisores
+      let sumaDivisores = 0;
+      for (let i = 1; i < numero; i++) {
+        if (numero % i === 0) {
+          sumaDivisores += i;
+        }
+      }
+
+      // Verificar si el número es perfecto
+      if (sumaDivisores === numero) {
+        resultadoDiv.textContent = `${numero} es un número perfecto.`;
+      } else {
+        resultadoDiv.textContent = `${numero} no es un número perfecto.`;
+      }
+    }
+  </script>
+</body>
+</html>
+
+//Comprobación de números primos: Verificar si un número dado es primo.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verificar Número Primo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px;
+      background-color: #ecf0f1;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Verificar si un Número es Primo</h2>
+    <p>Ingresa un número para verificar si es primo.</p>
+    <input type="number" id="numero" placeholder="Ingresa un número">
+    <button onclick="verificarPrimo()">Verificar Número Primo</button>
+
+    <div class="result" id="resultado">
+      <!-- Aquí se mostrará el resultado -->
+    </div>
+  </div>
+
+  <script>
+    function verificarPrimo() {
+      const numero = parseInt(document.getElementById('numero').value);
+      const resultadoDiv = document.getElementById('resultado');
+      
+      // Limpiar el resultado anterior
+      resultadoDiv.innerHTML = '';
+
+      // Verificar si el número es válido
+      if (isNaN(numero) || numero <= 1) {
+        resultadoDiv.textContent = 'Por favor ingresa un número mayor que 1.';
+        return;
+      }
+
+      let esPrimo = true;
+
+      // Comprobar si el número es divisible por algún número entre 2 y la raíz cuadrada de n
+      for (let i = 2; i <= Math.sqrt(numero); i++) {
+        if (numero % i === 0) {
+          esPrimo = false;
+          break;
+        }
+      }
+
+      // Mostrar el resultado
+      if (esPrimo) {
+        resultadoDiv.textContent = `${numero} es un número primo.`;
+      } else {
+        resultadoDiv.textContent = `${numero} no es un número primo.`;
+      }
+    }
+  </script>
+</body>
+</html>
+
+//Invertir un número: Invertir los dígitos de un número ingresado por el usuario.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invertir Número</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px;
+      background-color: #ecf0f1;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Invertir Número</h2>
+    <p>Ingresa un número para invertir sus dígitos.</p>
+    <input type="number" id="numero" placeholder="Ingresa un número">
+    <button onclick="invertirNumero()">Invertir Número</button>
+
+    <div class="result" id="resultado">
+      <!-- Aquí se mostrará el número invertido -->
+    </div>
+  </div>
+
+  <script>
+    function invertirNumero() {
+      const numero = document.getElementById('numero').value;
+      const resultadoDiv = document.getElementById('resultado');
+      
+      // Limpiar el resultado anterior
+      resultadoDiv.innerHTML = '';
+
+      // Verificar si el número es válido
+      if (numero === '' || isNaN(numero)) {
+        resultadoDiv.textContent = 'Por favor ingresa un número válido.';
+        return;
+      }
+
+      // Invertir el número
+      const numeroInvertido = numero.split('').reverse().join('');
+      
+      // Mostrar el número invertido
+      resultadoDiv.textContent = `El número invertido es: ${numeroInvertido}`;
+    }
+  </script>
+</body>
+</html>
+
+//Número de dígitos de un número: Contar cuántos dígitos tiene un número entero positivo.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contar Dígitos de un Número</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px;
+      background-color: #ecf0f1;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Contar Dígitos de un Número</h2>
+    <p>Ingresa un número para contar cuántos dígitos tiene.</p>
+    <input type="number" id="numero" placeholder="Ingresa un número">
+    <button onclick="contarDigitos()">Contar Dígitos</button>
+
+    <div class="result" id="resultado">
+      <!-- Aquí se mostrará el número de dígitos -->
+    </div>
+  </div>
+
+  <script>
+    function contarDigitos() {
+      const numero = document.getElementById('numero').value;
+      const resultadoDiv = document.getElementById('resultado');
+      
+      // Limpiar el resultado anterior
+      resultadoDiv.innerHTML = '';
+
+      // Verificar si el número es válido
+      if (numero === '' || isNaN(numero) || numero <= 0) {
+        resultadoDiv.textContent = 'Por favor ingresa un número entero positivo válido.';
+        return;
+      }
+
+      // Contar los dígitos del número
+      const numDigitos = numero.toString().length;
+
+      // Mostrar el número de dígitos
+      resultadoDiv.textContent = `El número tiene ${numDigitos} dígitos.`;
+    }
+  </script>
+</body>
+</html>
+
+//Dibujo de un triángulo de asteriscos: Imprimir un triángulo de asteriscos de altura n tal como se indica en el ejemplo. Ejemplo para n = 5: 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dibujo de Triángulo de Asteriscos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px;
+      background-color: #ecf0f1;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      white-space: pre-wrap; /* Para mantener los saltos de línea */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Dibujo de Triángulo de Asteriscos</h2>
+    <p>Ingresa la altura del triángulo para dibujarlo.</p>
+    <input type="number" id="altura" placeholder="Ingresa la altura (n)">
+    <button onclick="dibujarTriangulo()">Dibujar Triángulo</button>
+
+    <div class="result" id="resultado">
+      <!-- Aquí se mostrará el triángulo de asteriscos -->
+    </div>
+  </div>
+
+  <script>
+    function dibujarTriangulo() {
+      const altura = parseInt(document.getElementById('altura').value);
+      const resultadoDiv = document.getElementById('resultado');
+      
+      // Limpiar el resultado anterior
+      resultadoDiv.innerHTML = '';
+
+      // Verificar si la altura es válida
+      if (isNaN(altura) || altura <= 0) {
+        resultadoDiv.textContent = 'Por favor ingresa un número entero positivo válido.';
+        return;
+      }
+
+      let triangulo = '';
+
+      // Crear el triángulo
+      for (let i = 1; i <= altura; i++) {
+        // Generar los espacios y los asteriscos para cada línea
+        let espacios = ' '.repeat(altura - i); // Espacios a la izquierda
+        let asteriscos = '*'.repeat(i * 2 - 1); // Asteriscos para cada fila
+        triangulo += espacios + asteriscos + '\n'; // Agregar a la variable
+      }
+
+      // Mostrar el triángulo
+      resultadoDiv.textContent = triangulo;
+    }
+  </script>
+</body>
+</html>
+         
