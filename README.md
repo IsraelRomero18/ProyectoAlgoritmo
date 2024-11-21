@@ -1,48 +1,186 @@
-   # ejercicios-de-cadenas.html
+   # css.html
   Ejercicios de cadenas con JavasCript y html faciles de realizar 
-   // Generar un arreglo de 10 números aleatorios entre 1 y 100
-    let numeros = Array.from({ length: 10 }, () => Math.floor(Math.random() * 100) + 1);
-// Recorrer y mostrar cada número
-numeros.forEach((numero, index) => {
-    console.log(Número ${index + 1}: ${numero});
-});
-Promedio de calificaciones: Calcular el promedio de cinco calificaciones ingresadas por el usuario.
+   <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concatenar Nombre y Apellido</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        label { margin-right: 10px; }
+        button { margin-top: 10px; }
+        #resultado { margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre"><br><br>
 
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido"><br><br>
 
-// Importar readline para recibir datos del usuario en la terminal
-const readline = require('readline');
+    <button onclick="concatenar()">Concatenar</button>
 
-// Configuración de la interfaz de entrada y salida
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
+    <div id="resultado"></div>
 
-let calificaciones = []; // Arreglo para almacenar las calificaciones
-let total = 0;
+    <script>
+        function concatenar() {
+            const nombre = document.getElementById("nombre").value;
+            const apellido = document.getElementById("apellido").value;
+            document.getElementById("resultado").innerText = ${apellido} ${nombre};
+        }
+    </script>
+</body>
+</html>
+2. Comparar frases
+HTML + CSS + JavaScript
+html
+Copiar código
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparar Frases</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        label { margin-right: 10px; }
+        button { margin-top: 10px; }
+        #resultado { margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <label for="frase1">Frase 1:</label>
+    <input type="text" id="frase1"><br><br>
 
-// Función para pedir las calificaciones al usuario
-function pedirCalificaciones(i) {
-    if (i < 5) {
-        rl.question(`Ingresa la calificación ${i + 1}: `, (respuesta) => {
-            let calificacion = parseFloat(respuesta);
-            if (!isNaN(calificacion) && calificacion >= 0 && calificacion <= 100) {
-                calificaciones.push(calificacion);
-                total += calificacion;
-                pedirCalificaciones(i + 1); // Pedir la siguiente calificación
+    <label for="frase2">Frase 2:</label>
+    <input type="text" id="frase2"><br><br>
+
+    <button onclick="comparar()">Comparar</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function comparar() {
+            const frase1 = document.getElementById("frase1").value;
+            const frase2 = document.getElementById("frase2").value;
+
+            let resultado;
+            if (frase1 === frase2) {
+                resultado = "Las frases son iguales.";
+            } else if (frase1 > frase2) {
+                resultado = "La primera frase es mayor.";
             } else {
-                console.log("Por favor, ingresa un número válido entre 0 y 100.");
-                pedirCalificaciones(i); // Repetir la entrada para esta calificación
+                resultado = "La primera frase es menor.";
             }
-        });
-    } else {
-        // Calcular el promedio
-        let promedio = total / calificaciones.length;
-        console.log(Las calificaciones ingresadas son: ${calificaciones.join(", ")});
-        console.log(El promedio de las calificaciones es: ${promedio.toFixed(2)});
-        rl.close(); // Cerrar la interfaz
-    }
-}
+            document.getElementById("resultado").innerText = resultado;
+        }
+    </script>
+</body>
+</html>
+3. Crear palabra con espacios
+HTML + CSS + JavaScript
+html
+Copiar código
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Palabra con Espacios</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        label { margin-right: 10px; }
+        button { margin-top: 10px; }
+        #resultado { margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <label for="palabra">Ingresa una palabra:</label>
+    <input type="text" id="palabra"><br><br>
 
-// Iniciar el programa
-pedirCalificaciones(0);
+    <button onclick="crearEspacios()">Crear con Espacios</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function crearEspacios() {
+            const palabra = document.getElementById("palabra").value;
+            let resultado = palabra.split('').join(' ');
+            document.getElementById("resultado").innerText = resultado;
+        }
+    </script>
+</body>
+</html>
+4. Presentar cada carácter con su código ASCII
+HTML + CSS + JavaScript
+html
+Copiar código
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código ASCII de cada carácter</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        label { margin-right: 10px; }
+        button { margin-top: 10px; }
+        #resultado { margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <label for="frase">Ingresa una frase:</label>
+    <input type="text" id="frase"><br><br>
+
+    <button onclick="mostrarAscii()">Mostrar ASCII</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function mostrarAscii() {
+            const frase = document.getElementById("frase").value;
+            let resultado = '';
+            frase.split('').forEach(char => {
+                resultado += Carácter: ${char}, Código ASCII: ${char.charCodeAt(0)}<br>;
+            });
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+</body>
+</html>
+5. Invertir una frase
+HTML + CSS + JavaScript
+html
+Copiar código
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invertir Frase</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        label { margin-right: 10px; }
+        button { margin-top: 10px; }
+        #resultado { margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <label for="frase">Ingresa una frase:</label>
+    <input type="text" id="frase"><br><br>
+
+    <button onclick="invertirFrase()">Invertir Frase</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function invertirFrase() {
+            const frase = document.getElementById("frase").value;
+            let invertida = frase.split('').reverse().join('');
+            document.getElementById("resultado").innerText = invertida;
+        }
+    </script>
+</body>
+</html>
